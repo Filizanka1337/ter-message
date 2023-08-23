@@ -1,0 +1,4 @@
+tk
+flask
+numpy
+kivy

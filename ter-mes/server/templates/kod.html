@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Przesyłanie i Pobieranie Plików</title>
+</head>
+<body>
+    <h1>Przesyłanie Plików</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label>Wybierz plik do przesłania:</label>
+        <input type="file" name="file">
+        <input type="submit" value="Prześlij plik">
+    </form>
+
+    <h1>Pobieranie Plików</h1>
+    <ul>
+        {% for filename in uploaded_files %}
+            <li><a href="/uploads/{{ filename }}">{{ filename }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
